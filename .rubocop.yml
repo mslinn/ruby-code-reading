@@ -1,0 +1,15 @@
+AllCops:
+  Exclude:
+      - vendor/**/*
+      - Gemfile*
+  NewCops: enable
+  TargetRubyVersion: 2.6
+
+Layout/LineLength:
+  Max: 150
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

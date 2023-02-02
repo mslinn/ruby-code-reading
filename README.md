@@ -3,6 +3,10 @@
 Following along Michael Cordell&rsquo;s article
 [Reading Ruby Code: ROM - preface](https://blog.mikecordell.com/2017/01/29/reading-ruby-code-rom-preface/).
 
+I am using Visual Studio Code with the
+[rebornix.Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby)
+extension to debug Ruby code. The second paragraph of dependencies supports development-related activities, including [ruby-rubocop](https://marketplace.visualstudio.com/items?itemName=misogi.ruby-rubocop).
+
 ```shell
 mkdir ruby-code-reading
 cd ruby-code-reading
@@ -12,7 +16,12 @@ cat <<- EOF >> Gemfile
   gem 'rom-sql'
   gem 'sqlite3'
   gem 'rom-repository'
-  gem 'pry-byebug'
+
+  gem 'debase', "0.2.5.beta2", require: false
+  gem 'ruby-debug-ide', require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-rake', require: false
+  gem 'rubocop-rspec', require: false
 EOF
 ```
 
